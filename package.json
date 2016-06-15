@@ -1,0 +1,24 @@
+{
+  "name": "backbone-note",
+  "version": "1.0.0",
+  "description": "backbone app example",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarkZhang/backbone-note.git"
+  },
+  "keywords": [
+    "backbone",
+    "node",
+    "require.js"
+  ],
+  "author": "leasy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarkZhang/backbone-note/issues"
+  },
+  "homepage": "https://github.com/BarkZhang/backbone-note#readme"
+}
