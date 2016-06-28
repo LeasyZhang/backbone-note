@@ -17,7 +17,8 @@
   ],
   "dependencies":{
     "express": "~3.0.0",
-    "backbone": "~1.1.2"
+    "backbone": "~1.2.3",
+    "backbone-localstorage": "~0.3.2"
   },
   "devDependencies": {
     "underscore": "~1.5.2",
