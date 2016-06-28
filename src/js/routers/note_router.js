@@ -24,7 +24,11 @@ APP.NoteRouter = Backbone.Router.extend({
     },
 
     create: function () {
-
+        var view = new APP.NoteNewView({
+            collection: this.collection,
+            model: new APP.NoteModel()
+        });
+        this.$container.html(view.render().el);
     },
 
     delete: function () {
@@ -36,7 +40,7 @@ APP.NoteRouter = Backbone.Router.extend({
     },
 
     index: function () {
-        var view = new APP.NoteIndexView({collection : this.collection});
+        var view = new APP.NoteIndexView({collection: this.collection});
         this.$container.html(view.render().el);
     }
 });
