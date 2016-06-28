@@ -9,7 +9,7 @@ APP.NoteRouter = Backbone.Router.extend({
         "note/new": "create",
         "notes/index": "index",
         "note/:id/edit": "edit",
-        "node/:id/delete": "delete"
+        "note/:id/delete": "delete"
     },
 
     $container: $("#primary-content"),
@@ -31,12 +31,15 @@ APP.NoteRouter = Backbone.Router.extend({
         this.$container.html(view.render().el);
     },
 
-    delete: function () {
-
+    delete: function (id) {
+        var note = this.collection.get(id);
+        note.destroy();
+        Backbone.history.navigate("notes/index", {trigger: true});
     },
 
-    edit: function () {
-
+    edit: function (id) {
+        var view = new APP.NoteEditView({model: this.collection.get(id)});
+        this.$container.html(view.render().el);
     },
 
     index: function () {
